@@ -1,0 +1,18 @@
+language: objective-c
+osx_image: xcode10.2.1
+before_install:
+    - brew upgrade cocoapods
+deploy:
+  provider: script
+  script: sh run_tests.sh
+  on:
+    branch: master
+branches:
+  only:
+    - master
+notifications:
+  email:
+    recipients:
+      - hungtq@flomail.net
+    on_success: never
+    on_failure: always

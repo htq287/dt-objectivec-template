@@ -1,0 +1,2 @@
+#include "Base-iOS.xcconfig"
+#include "Pods/Target Support Files/Pods-TPLProjectName-iOS/Pods-TPLProjectName-iOS.debug.xcconfig"

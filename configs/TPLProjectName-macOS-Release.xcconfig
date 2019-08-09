@@ -1,0 +1,2 @@
+#include "Base-macOS.xcconfig"
+#include "Pods/Target Support Files/Pods-TPLProjectName-macOS/Pods-TPLProjectName-macOS.release.xcconfig"
