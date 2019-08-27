@@ -6,6 +6,7 @@ target 'Shared' do
   use_frameworks!
 
   # Pods for Shared
+  pod 'AFNetworking', '~> 3.0'
 
   target 'SharedTests' do
     inherit! :search_paths
