@@ -18,6 +18,7 @@ targets:
   #macOS application
   TPLProjectName-macOS:
     platform: macOS
+    deploymentTarget: "10.14"
     type: application
     sources:
       - TPLProjectName/macOS
@@ -31,6 +32,7 @@ targets:
   Shared:
     platform: macOS
     type: framework
+    deploymentTarget: "10.14"
     sources:
       - Shared/
     configFiles:
