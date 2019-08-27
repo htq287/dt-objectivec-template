@@ -38,6 +38,15 @@ targets:
     configFiles:
       Debug: configs/Shared-Debug.xcconfig
       Release: configs/Shared-Release.xcconfig
+  Core:
+    platform: macOS
+    type: framework
+    deploymentTarget: "10.14"
+    sources:
+      - Core/
+    configFiles:
+      Debug: configs/Core-Debug.xcconfig
+      Release: configs/Core-Release.xcconfig
   #Test Targets
   TPLProjectName-macOSTests:
     platform: macOS
@@ -77,4 +86,17 @@ targets:
     scheme:
       testTargets:
         - SharedTests
+      gatherCoverageData: true
+  CoreTests:
+    platform: macOS
+    type: bundle.unit-test
+    configFiles:
+      Debug: configs/CoreTests.xcconfig
+    sources:
+      - Tests/CoreTests
+    dependencies:
+      - target: Core
+    scheme:
+      testTargets:
+        - CoreTests
       gatherCoverageData: true

@@ -1,0 +1,2 @@
+#include "Base.xcconfig"
+#include "Pods/Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"
