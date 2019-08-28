@@ -12,17 +12,23 @@ PODS:
   - AFNetworking/Reachability (3.2.1)
   - AFNetworking/Security (3.2.1)
   - AFNetworking/Serialization (3.2.1)
+  - GBDeviceInfo (6.0.0):
+    - GBDeviceInfo/Core (= 6.0.0)
+  - GBDeviceInfo/Core (6.0.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - GBDeviceInfo (~> 6.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - GBDeviceInfo
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  GBDeviceInfo: b7576f403b3050c1d3f4b490ab1d7dbb951bb1d9
 
-PODFILE CHECKSUM: 942e602ed5b52305fd3b4b5b43e93979b0ab6db0
+PODFILE CHECKSUM: 831f1ba5fc4ab087a675701a74b227c174bed687
 
 COCOAPODS: 1.7.3

@@ -1,2 +1,3 @@
 #include "Base.xcconfig"
 #include "Pods/Target Support Files/Pods-CoreTests/Pods-CoreTests.debug.xcconfig"
+API_ROOT= http:/$()/localhost:3005

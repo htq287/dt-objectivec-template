@@ -3,10 +3,11 @@
 
 target 'Core' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+  # use_frameworks!
 
   # Pods for Core
   pod 'AFNetworking', '~> 3.0'
+  pod 'GBDeviceInfo', '~> 6.0'
 
   target 'CoreTests' do
     inherit! :search_paths

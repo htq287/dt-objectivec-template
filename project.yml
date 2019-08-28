@@ -34,7 +34,7 @@ targets:
     type: framework
     deploymentTarget: "10.14"
     sources:
-      - Shared/
+      - Shared
     configFiles:
       Debug: configs/Shared-Debug.xcconfig
       Release: configs/Shared-Release.xcconfig
@@ -43,7 +43,7 @@ targets:
     type: framework
     deploymentTarget: "10.14"
     sources:
-      - Core/
+      - Core
     configFiles:
       Debug: configs/Core-Debug.xcconfig
       Release: configs/Core-Release.xcconfig
