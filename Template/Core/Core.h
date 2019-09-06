@@ -2,7 +2,7 @@
 //  Core.h
 //  TPLProjectName
 //
-//  Created by Hung Truong on 8/28/19.
+//  Created by TPLAuthor on 8/28/19.
 //
 
 #import <Cocoa/Cocoa.h>

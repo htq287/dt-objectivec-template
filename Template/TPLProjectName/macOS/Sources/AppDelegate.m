@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  TPLProjectName-macOS
 //
-//  Created by Hung Truong on 8/9/19.
-//  Copyright © 2019 hungtq. All rights reserved.
+//  Created by TPLAuthor on 8/9/19.
+//  Copyright © 2019 TPLOrganizationName. All rights reserved.
 //
 
 #import "AppDelegate.h"

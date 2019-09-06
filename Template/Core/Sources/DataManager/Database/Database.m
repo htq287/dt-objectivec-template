@@ -2,7 +2,7 @@
 //  Database.m
 //  Core
 //
-//  Created by Hung Truong on 8/28/19.
+//  Created by TPLAuthor on 8/28/19.
 //
 
 #import "Database.h"
