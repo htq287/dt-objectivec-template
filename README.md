@@ -11,6 +11,11 @@ Welcome to Swift Template, an useful project structure for creating effectively 
   - Xcode: 10.3 +
   - Xcodegen: 2.5.0
   - Carthage: 0.33.0
+
+# Features
+- An Advanced template
+- An Generic Template for macosx App
+- An Generic template for Command Line Tool
   
 
 # Installation
@@ -19,9 +24,18 @@ Welcome to Swift Template, an useful project structure for creating effectively 
   - Point to template folder: `$ cd objectivec-template`
   - Before installing the project, make sure [XCodegen](https://github.com/yonaskolb/XcodeGen), [Carthage](https://github.com/Carthage/Carthage#installing-carthage) and [Cocoapods](https://guides.cocoapods.org/using/getting-started.html) installed. If not yet installed, just run `$ make init-env`
   - To create your project, just run: 
-    ```sh
-    $ make install
-    ```
+    - Advanced template
+      ```sh
+      $ make install
+      ```
+    - Generic template for Command Line Tool 
+      ```sh
+      $ make install_commandlinetool_template
+      ```
+    - Generic template for macosx 
+      ```sh
+      $ make install_macosx_generic_template
+      ```
   - After created project, we'll need some the following steps
     - Jump to your project folder
       ```sh
