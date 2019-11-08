@@ -12,9 +12,9 @@ PODS:
   - AFNetworking/Reachability (3.2.1)
   - AFNetworking/Security (3.2.1)
   - AFNetworking/Serialization (3.2.1)
-  - GBDeviceInfo (6.0.0):
-    - GBDeviceInfo/Core (= 6.0.0)
-  - GBDeviceInfo/Core (6.0.0)
+  - GBDeviceInfo (6.3.0):
+    - GBDeviceInfo/Core (= 6.3.0)
+  - GBDeviceInfo/Core (6.3.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -27,7 +27,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  GBDeviceInfo: b7576f403b3050c1d3f4b490ab1d7dbb951bb1d9
+  GBDeviceInfo: a3f39dba1a04dcb630abff65d6f7e8fbf319eadd
 
 PODFILE CHECKSUM: 831f1ba5fc4ab087a675701a74b227c174bed687
 
