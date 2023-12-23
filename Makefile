@@ -9,8 +9,8 @@ init-env:
 	brew install carthage
 	brew install xcodegen
 install:
-	swift -target x86_64-apple-macosx10.14 installer.swift -template Template
+	swift installer.swift -template Template
 install_commandlinetool_template:
-	swift -target x86_64-apple-macosx10.14 installer.swift -template CLT_GenericTemplate
+	swift installer.swift -template CLT_GenericTemplate
 install_macosx_generic_template:
-	swift -target x86_64-apple-macosx10.14 installer.swift -template macOS_GenericTemplate
+	swift installer.swift -template macOS_GenericTemplate
