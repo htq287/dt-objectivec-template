@@ -45,7 +45,7 @@ let runScriptPathURL = NSURL(fileURLWithPath: fileManager.currentDirectoryPath, 
 let currentScriptPathURL = NSURL(fileURLWithPath: NSURL(fileURLWithPath: CommandLine.arguments[0], relativeTo: runScriptPathURL as URL).deletingLastPathComponent!.path, isDirectory: true)
 let projectTemplateForlderURL = NSURL(fileURLWithPath: templateName, relativeTo: currentScriptPathURL as URL)
 var newProjectFolderPath = ""
-let ignoredFiles = [".DS_Store", "UserInterfaceState.xcuserstate", "Pods", "Carthage", "build"]
+let ignoredFiles = [".DS_Store", "UserInterfaceState.xcuserstate", "Pods", "Carthage", "build", "ed25519_sign", "background.png", "assets.sketch", "launch-screen.sketch", "default.profraw", "app-icon.sketch"]
 
 extension NSURL {
     var fileName: String {
@@ -143,9 +143,6 @@ let newProjectFolderURL = NSURL(fileURLWithPath: out_path, relativeTo: runScript
 
 newProjectFolderPath = newProjectFolderURL.path!
 checkThatProjectForlderCanBeCreated(projectURL: newProjectFolderURL)
-
-print("Check Output: \(newProjectFolderURL.path!)")
-print("Check Template: \(projectTemplateForlderURL.path!)")
 
 // Copy template folder to a new folder
 do {
