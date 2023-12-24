@@ -7,10 +7,10 @@ Welcome to Swift Template, an useful project structure for creating effectively 
 ![Swift 5.0+](https://img.shields.io/badge/Swift-5.0%2B-orange.svg)
 
 - Requirements:
-  - macOS: 10.14.5 (or higher)
-  - Xcode: 10.3 +
-  - Xcodegen: 2.5.0
-  - Carthage: 0.33.0
+  - macOS: 14.1 (or higher)
+  - Xcode: 15.0.1 +
+  - Xcodegen: 2.38.0
+  - Carthage: 0.39.1
 
 # Features
 - An Advanced template
@@ -54,7 +54,7 @@ Welcome to Swift Template, an useful project structure for creating effectively 
 # License
 The MIT License (MIT)
 
-Copyright (C) 2019, Hung Q. Truong. https://htq287.github.io. All rights reserved.
+Copyright (C) 2023, Hung Q. Truong. https://htq287.com. All rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
