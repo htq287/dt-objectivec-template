@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode10.2.1
+osx_image: xcode15.0.1
 before_install:
     - brew upgrade cocoapods
 deploy:
@@ -13,6 +13,6 @@ branches:
 notifications:
   email:
     recipients:
-      - hungtq@flomail.net
+      - htq287@gmail.com
     on_success: never
     on_failure: always

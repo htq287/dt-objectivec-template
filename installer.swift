@@ -22,22 +22,22 @@ default:
     
 }
 
-
-// let TPLProjectName = "TPLProjectName"
 let TPLAuthor = "TPLAuthor"
 var TPLBundleIdentifier = "TPLBundleIdentifier"
 let TPLAuthorWebsite = "TPLAuthorWebsite"
 let TPLUserName = "TPLUserName"
 let TPLOrganizationName = "TPLOrganizationName"
-let TPLCopyright = "Copyright © 2019"
+let TPLCopyright = "Copyright © 2023"
 
 var projectName = "SampleProject"
-var bundleIdentifier = "com.rilthot.SampleProject"
-var author = "Hung Q. Truong"
-var authorWebsite = "https://htq287.github.io"
+var bundleIdentifier = "com.HungQ.SampleProject"
+var author = "Hung Q."
+var authorWebsite = "https://htq287.com"
 var userName = "hungtq"
-var organizationName = "Rilthot"
-var copyright = "Copyright © 2019"
+var organizationName = "Hung Q."
+var copyright = "Copyright © 2023"
+
+var out = "Out"
 
 let fileManager = FileManager.default
 
@@ -95,7 +95,9 @@ func printErrorLogsAndExit<T>(logs message: T) {
 func checkThatProjectForlderCanBeCreated(projectURL: NSURL){
     var isDirectory: ObjCBool = true
     if fileManager.fileExists(atPath: projectURL.path!, isDirectory: &isDirectory) {
+        
         printErrorLogsAndExit(logs: "\(String(describing:projectName)) \(String(describing:(isDirectory.boolValue ? "folder already" : "file"))) exists in \(String(describing:runScriptPathURL.path)) directory, please delete it and try again")
+        
     }
 }
 
@@ -110,7 +112,6 @@ func shell(args: String...) -> (output: String, exitCode: Int32) {
     task.waitUntilExit()
     let data = pipe.fileHandleForReading.readDataToEndOfFile()
     let output = String(decoding: data, as: UTF8.self)
-    //let output = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as? String ?? ""
     return (output, task.terminationStatus)
 }
 
@@ -126,34 +127,49 @@ author = prompt("Author", author)
 organizationName = prompt("Organizer", organizationName)
 copyright = prompt("Copyright", copyright)
 
+let out_path = out + "/" + projectName;
+
+// create output folder
+let putFolderURL = NSURL(fileURLWithPath: out, relativeTo: runScriptPathURL as URL);
+do {
+    try fileManager.createDirectory(atPath: putFolderURL.path!, withIntermediateDirectories: true, attributes: nil)
+} catch {
+    print(error.localizedDescription)
+}
+
 // Check if folder already exists
-let newProjectFolderURL = NSURL(fileURLWithPath: projectName, relativeTo: runScriptPathURL as URL)
+let newProjectFolderURL = NSURL(fileURLWithPath: out_path, relativeTo: runScriptPathURL as URL)
+
+
 newProjectFolderPath = newProjectFolderURL.path!
 checkThatProjectForlderCanBeCreated(projectURL: newProjectFolderURL)
 
+print("Check Output: \(newProjectFolderURL.path!)")
+print("Check Template: \(projectTemplateForlderURL.path!)")
+
 // Copy template folder to a new folder
 do {
-    try fileManager.copyItem(at: projectTemplateForlderURL as URL, to: newProjectFolderURL as URL)
+   try fileManager.copyItem(at: projectTemplateForlderURL as URL, to: newProjectFolderURL as URL)
 } catch let error as NSError {
-    printErrorLogsAndExit(logs: error.localizedDescription)
+    printErrorLogsAndExit(logs: error)
 }
 
 // rename files/Folders and update content
-let enumerator = fileManager.enumerator(at: newProjectFolderURL as URL, includingPropertiesForKeys: [.nameKey, .isDirectoryKey], options: [], errorHandler: nil)!
-var directories = [NSURL]()
-print("\nCreating \(projectName) ...")
-while let fileURL = enumerator.nextObject() as? NSURL {
-    guard !ignoredFiles.contains(fileURL.fileName) else { continue }
-    if fileURL.isDirectory {
-      directories.append(fileURL)
-    }
-    else {
-      fileURL.updateContent()
-      fileURL.renameIfNeeded()
-    }
-}
+ let enumerator = fileManager.enumerator(at: newProjectFolderURL as URL, includingPropertiesForKeys: [.nameKey, .isDirectoryKey], options: [], errorHandler: nil)!
+ var directories = [NSURL]()
+ print("\nCreating \(projectName) ...")
+ while let fileURL = enumerator.nextObject() as? NSURL {
+     guard !ignoredFiles.contains(fileURL.fileName) else { continue }
+     if fileURL.isDirectory {
+       directories.append(fileURL)
+     }
+     else {
+       fileURL.updateContent()
+       fileURL.renameIfNeeded()
+     }
+ }
 
-for fileURL in directories.reversed() {
-  fileURL.renameIfNeeded()
-}
+ for fileURL in directories.reversed() {
+   fileURL.renameIfNeeded()
+ }
 
