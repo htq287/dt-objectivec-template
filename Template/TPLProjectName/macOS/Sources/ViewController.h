@@ -2,8 +2,7 @@
 //  ViewController.h
 //  TPLProjectName-macOS
 //
-//  Created by TPLAuthor on 8/9/19.
-//  Copyright © 2019 TPLOrganizationName. All rights reserved.
+//  Created by TPLAuthor on 24/12/2023.
 //
 
 #import <Cocoa/Cocoa.h>

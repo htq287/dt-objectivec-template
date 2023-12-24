@@ -2,15 +2,12 @@
 //  AppDelegate.h
 //  TPLProjectName-iOS
 //
-//  Created by TPLAuthor on 8/9/19.
-//  Copyright © 2019 TPLOrganizationName. All rights reserved.
+//  Created by TPLAuthor on 24/12/2023.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
 
 
 @end

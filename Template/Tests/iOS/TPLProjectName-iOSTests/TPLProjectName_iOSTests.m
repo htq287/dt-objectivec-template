@@ -2,8 +2,7 @@
 //  TPLProjectName_iOSTests.m
 //  TPLProjectName-iOSTests
 //
-//  Created by TPLAuthor on 8/9/19.
-//  Copyright © 2019 TPLOrganizationName. All rights reserved.
+//  Created by TPLAuthor on 24/12/2023.
 //
 
 #import <XCTest/XCTest.h>

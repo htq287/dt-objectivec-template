@@ -2,13 +2,13 @@
 //  AppDelegate.m
 //  TPLProjectName-macOS
 //
-//  Created by TPLAuthor on 8/9/19.
-//  Copyright © 2019 TPLOrganizationName. All rights reserved.
+//  Created by TPLAuthor on 24/12/2023.
 //
 
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
+
 
 @end
 
@@ -21,6 +21,11 @@
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+}
+
+
+- (BOOL)applicationSupportsSecureRestorableState:(NSApplication *)app {
+    return YES;
 }
 
 
